@@ -4,7 +4,7 @@
 }
 .logo {
      height: auto;
-     width: clamp(6em, 15vw, 20em);
+     width: clamp(3em, 15vw, 20em);
 }
 .line {
      width: 100%;
@@ -134,4 +134,11 @@
 .Category{
      padding-left: 1rem;
      font-size: clamp(1.5rem, 2.5vw, 4rem);
+}
+.m-text {
+     margin-left: clamp(3rem, 15vw, 30rem);
+}
+.landing-img {
+     height: auto;
+     width: clamp(20rem, 20vw, 25rem);
 }
