@@ -4,7 +4,7 @@
 }
 .logo {
      height: auto;
-     width: clamp(4em, 8vw, 20em);
+     width: clamp(3em, 15vw, 20em);
 }
 .line {
      width: 100%;
@@ -105,9 +105,11 @@
      color: #FFEFF8;
      -webkit-text-stroke-color: #4B072D;
      -webkit-text-stroke-width: 1.5px;
+     font-size: clamp(2rem, 5vw, 4rem);
 }
 .Purple-text{
      color: #4B072D;
+     font-size: clamp(2rem, 5vw, 4rem);
 }
 .nav-item {
      font-size: clamp(1rem, 2.5vw, 2rem);
@@ -135,6 +137,12 @@
 }
 .footlogo{
      width: clamp(3em, 11vw, 15em);
-
      aspect-ratio: 1 / 1;
+}
+.m-text {
+     margin-left: clamp(3rem, 15vw, 30rem);
+}
+.landing-img {
+     height: auto;
+     width: clamp(20rem, 20vw, 25rem);
 }
