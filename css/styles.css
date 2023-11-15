@@ -127,9 +127,14 @@
 }
 .footerlogo{
      height: 100%;
-     width: clamp(30px, 4vw, 400px);
+     width: clamp(28px, 4vw, 400px);
 }
 .Category{
      padding-left: 1rem;
      font-size: clamp(1.5rem, 2.5vw, 4rem);
+}
+.footlogo{
+     width: clamp(3em, 11vw, 15em);
+
+     aspect-ratio: 1 / 1;
 }
