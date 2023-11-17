@@ -136,7 +136,8 @@
      font-size: clamp(1.5rem, 2.5vw, 4rem);
 }
 .footlogo{
-     width: clamp(3em, 11vw, 15em);
+     width: clamp(5em, 5vw, 15em);
+     height: auto;
      aspect-ratio: 1 / 1;
 }
 .m-text {
