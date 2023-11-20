@@ -109,11 +109,11 @@
      color: #FFEFF8;
      -webkit-text-stroke-color: #4B072D;
      -webkit-text-stroke-width: 1.5px;
-     font-size: clamp(2rem, 5vw, 4rem);
+     font-size: clamp(1rem, 5vw, 4rem);
 }
 .Purple-text{
      color: #4B072D;
-     font-size: clamp(2rem, 5vw, 4rem);
+     font-size: clamp(1rem, 5vw, 4rem);
 }
 .nav-item {
      font-size: clamp(1rem, 2.5vw, 2rem);
@@ -150,5 +150,5 @@
 }
 .landing-img {
      height: auto;
-     width: clamp(20rem, 20vw, 25rem);
+     width: clamp(40rem, 100vw, 50rem);
 }
