@@ -16,9 +16,13 @@
 }
 .categories > img {
      border-radius: 100%;
-     height: 313px;
+     height: auto;
      width: 313px;
      object-fit: cover;
+     aspect-ratio: 1 / 1;
+}
+.categories > div {
+     font-size: clamp(.5rem, 5vw, 4rem);
 }
 .Collectionsrow {
      padding-bottom: 30px;
@@ -105,11 +109,11 @@
      color: #FFEFF8;
      -webkit-text-stroke-color: #4B072D;
      -webkit-text-stroke-width: 1.5px;
-     font-size: clamp(2rem, 5vw, 4rem);
+     font-size: clamp(1rem, 5vw, 4rem);
 }
 .Purple-text{
      color: #4B072D;
-     font-size: clamp(2rem, 5vw, 4rem);
+     font-size: clamp(1rem, 5vw, 4rem);
 }
 .nav-item {
      font-size: clamp(1rem, 2.5vw, 2rem);
@@ -132,8 +136,9 @@
      width: clamp(28px, 4vw, 400px);
 }
 .Category{
-     padding-left: 1rem;
-     font-size: clamp(1.5rem, 2.5vw, 4rem);
+     padding-left: 110px;
+     padding-bottom: 40px;
+     margin: clamp(1rem, 4vw, 8rem);
 }
 .footlogo{
      height: 100%;
@@ -144,5 +149,5 @@
 }
 .landing-img {
      height: auto;
-     width: clamp(20rem, 20vw, 25rem);
+     width: clamp(40rem, 100vw, 50rem);
 }
