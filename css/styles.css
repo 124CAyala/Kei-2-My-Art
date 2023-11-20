@@ -136,8 +136,8 @@
      width: clamp(28px, 4vw, 400px);
 }
 .Category{
-     padding-left: 1rem;
-     font-size: clamp(1.5rem, 2.5vw, 4rem);
+     padding-left: 110px;
+     padding-bottom: 40px;
      margin: clamp(1rem, 4vw, 8rem);
 }
 .footlogo{
