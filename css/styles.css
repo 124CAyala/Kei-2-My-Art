@@ -141,9 +141,8 @@
      margin: clamp(2rem, 4vw, 6rem);
 }
 .footlogo{
-     width: clamp(5em, 5vw, 15em);
-     height: auto;
-     aspect-ratio: 1 / 1;
+     height: 100%;
+     width: clamp(100px, 15vw, 300px);
 }
 .m-text {
      margin-left: clamp(3rem, 15vw, 30rem);
