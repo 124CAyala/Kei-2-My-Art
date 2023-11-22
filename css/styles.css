@@ -53,12 +53,12 @@
      border-radius: 3%;
 }
 .collect {
-     padding-left: 135px;
      padding-bottom: 40px;
+     margin: clamp(2rem, 4vw, 6rem);
 }
 .About-head{
-     padding-left: 125px;
      padding-bottom: 40px;
+     margin: clamp(2rem, 4vw, 6rem);
 }
 .circle {
      border-radius: 330px;
@@ -136,9 +136,8 @@
      width: clamp(28px, 4vw, 400px);
 }
 .Category{
-     padding-left: 110px;
      padding-bottom: 40px;
-     margin: clamp(1rem, 4vw, 8rem);
+     margin: clamp(2rem, 4vw, 6rem);
 }
 .footlogo{
      height: 100%;
