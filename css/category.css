@@ -7,10 +7,13 @@ body {
 }
 .category li {
     list-style-type: none;
-    margin: 3em;
+    margin: 2.5em;
 }
 .cat-img {
     background-color: lightgray;
-    height: 18rem;
-    margin: 2rem;
+    height: 16rem;
+    margin: 1rem;
+}
+.btn {
+    color: white;
 }
