@@ -16,3 +16,9 @@ body {
 .btn {
     color: white;
 }
+.cat-btn:hover {
+    border: 2px #4B072D solid;
+}
+.cat-btn:active {
+    border: 2px #4B072D solid;
+}
