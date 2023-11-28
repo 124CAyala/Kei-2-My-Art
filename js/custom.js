@@ -5,3 +5,10 @@ let selectedPic = document.getElementById("selected-pic")
 inputFile.onchange = function(){
     profilePic.src = URL.createObjectURL(inputFile.files[0]);
 }
+
+let selectedCategory = "" ;
+
+function getSelectedCat() {
+    let selectedCategory = document.getElementById(this);
+    console.log(selectedCategory);
+}
