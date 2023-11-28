@@ -14,7 +14,7 @@
 .ms-5 {
      margin-left: 3em !important;
 }
-.categories > img {
+.categories {
      border-radius: 100%;
      height: auto;
      width: 313px;
@@ -149,4 +149,10 @@
 .landing-img {
      height: auto;
      width: clamp(40rem, 100vw, 50rem);
+}
+.cat-btn:hover {
+     color: red;
+}
+.cat-btn:active {
+     color: red;
 }
