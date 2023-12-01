@@ -2,8 +2,9 @@
     padding-bottom: 25px;
 }
 .Upload{
-    width: 400px;
-    height: 650px;
+    width: 300px;
+    height: 450px;
+    padding-left: 5rem;
 }
 label{
     display: block;
@@ -22,14 +23,15 @@ input{
     color: #4B072D;
 }
 .Customize{
-    padding-left: 177px;
+    padding-left: 157px;
     padding-bottom: 20px;
 }
 .bg{
     background-color: #FFF0F9;
 }
 .update-btn{
-    margin-left: 60px;
+    margin-left: 40px;
+    height: clamp(10px, 2vw, 200px); 
 }
 .Customize-img{
     padding-left: 80px;
