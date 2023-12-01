@@ -1,4 +1,10 @@
-export let selected = "";
+var selectedPic = document.getElementById("selected-pic");
+let selected = "imgs/download.jpg";
+var customButton = document.getElementById("custom-btn");
+
+customButton.addEventListener("click", function(){
+    changeSelected(selected);
+})
 
 document.getElementById("champain").addEventListener("click", function(){
     getSelectedCat(1)
@@ -27,5 +33,11 @@ function getSelectedCat(x) {
     }
 
     console.log(x);
+    console.log(selected);
+}
+
+
+
+function changeSelected(selected) {
     console.log(selected);
 }
