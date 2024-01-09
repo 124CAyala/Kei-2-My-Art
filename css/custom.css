@@ -23,19 +23,20 @@ input{
     color: #4B072D;
 }
 .Customize{
-    padding-left: 157px;
+    text-align: center;
     padding-bottom: 20px;
 }
 .bg{
     background-color: #FFF0F9;
 }
 .update-btn{
-    margin-left: 40px;
-    height: clamp(10px, 2vw, 200px); 
+    margin-left: 69.4%;
+    height: clamp(10px, 2vw, 20px); 
 }
 .Customize-img{
-    padding-left: 80px;
+    padding-right: 50px;
     padding-bottom: 30px;
+    text-align: center;
 }
 .trans{
     background-color: transparent;
