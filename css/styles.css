@@ -41,15 +41,15 @@
      width: 100%;
      min-width: 70px;
      min-height: 70px;
-     outline: 1.5px solid #DCC56E;
      border-radius: 3%;
+     
 }
 .CollectionsImgL {
-     height: auto;
+     height: 85%;
      width: 100%;
      min-width: 70px;
-     min-height: 90px;
-     outline: 1.5px solid #DCC56E;
+     min-height: 70px;
+     object-fit: cover;
      border-radius: 3%;
 }
 .collect {
@@ -85,7 +85,7 @@
 }
 .about-bg{
      padding-top: 40px;
-     background-color: #4B072D;
+     background-color: #4B072D     ;
      color: #FFEFF8;
      -webkit-text-stroke-color: black;
      -webkit-text-stroke-width: .5px;
