@@ -30,11 +30,16 @@
 .Collectionscol {
      padding-left: 15px;
      padding-right: 15px;
+     padding-bottom: 50px;
+}
+.CollectionscolL {
+     padding-left: 15px;
+     padding-right: 15px;
+     max-height: 1000px;
 }
 .Collections {
      padding-left: 1rem;
      padding-right: 1rem;
-     padding-bottom: 50px;
 }
 .CollectionsImg {
      height: auto;
@@ -42,7 +47,6 @@
      min-width: 70px;
      min-height: 70px;
      border-radius: 3%;
-     
 }
 .CollectionsImgL {
      height: 85%;
