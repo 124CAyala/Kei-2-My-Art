@@ -154,9 +154,19 @@
      height: auto;
      width: clamp(40rem, 100vw, 50rem);
 }
+.cat-btn {
+     height: 420px !important;
+     width: 300px !important;
+     background-color: white;
+}
 .cat-btn:hover {
      color: red;
 }
 .cat-btn:active {
      color: red;
+}
+.img-size {
+     object-fit: contain;
+     width: 5vw;
+     height: 5vh;
 }
