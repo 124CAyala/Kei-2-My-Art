@@ -10,8 +10,10 @@ body {
     margin: 2.5em;
 }
 .cat-img {
-    height: 13rem;
-    margin: 1rem;
+    height: 420px;
+    width: 300px;
+    background-color: white;
+
 }
 .btn {
     color: white;
