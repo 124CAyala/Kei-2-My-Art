@@ -9,11 +9,33 @@ body {
     list-style-type: none;
     margin: 2.5em;
 }
-.cat-img {
+.cat-img-bottles {
     height: 420px;
     width: 300px;
-    background-color: white;
-
+}
+.cat-img-cartons {
+    height: 365px;
+    width: 300px;
+}
+.cat-img-glasses {
+    height: 300px;
+    width: 300px;
+}
+.cat-img-ornaments {
+    height: 300px;
+    width: 300px;
+}
+.cat-img-tumblers {
+    height: 274px;
+    width: 274px;
+}
+#custom-btn {
+    border: 1px solid white;
+    border-radius: 0;
+}
+#custom-btn:hover {
+    border: 3px solid pink;
+    color: pink;
 }
 .btn {
     color: white;
