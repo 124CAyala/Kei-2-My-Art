@@ -1,20 +1,25 @@
-.cust{
-    padding-bottom: 25px;
+.product {
+    height: auto;
+    width: 25%;
 }
-.Upload{
-    width: 300px;
-    height: 450px;
-    padding-left: 5rem;
+.selected-wrapper {
+    width: 100%;
+    height: auto;
 }
-label{
+.upload-btn{
     display: block;
     width: 200px;
     background: #DCC56E;
-    color: black;
+    color: white;
     padding: 12px;
     margin: auto;
-    border-radius: 5px;
+    border-radius: 3px;
     cursor: pointer;
+    text-align: center;
+}
+.upload-btn:hover{
+    scale: 1.05;
+    color: rgb(226, 226, 226);
 }
 input{
     display: none;
@@ -28,10 +33,7 @@ input{
 }
 .bg{
     background-color: #FFF0F9;
-}
-.update-btn{
-    margin-left: 69.4%;
-    height: clamp(10px, 2vw, 20px); 
+    height: 100vh;
 }
 .Customize-img{
     padding-right: 50px;
@@ -42,4 +44,7 @@ input{
     background-color: transparent;
     border-radius: 10px;
     border: 2px #DCC56E solid;
+}
+table {
+    height: 100%;
 }
