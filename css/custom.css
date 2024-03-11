@@ -48,3 +48,6 @@ input{
 table {
     height: 100%;
 }
+.material-symbols-outlined {
+    font-size: 45px;
+}
