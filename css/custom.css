@@ -58,12 +58,28 @@ table {
 #overlay {
     position: fixed;
     display: none;
-    width: 40%;
+    width: 35%;
     height: 100%;
     top: 0;
     left: 0;
     bottom: 0;
-    background-color: white;
+    background-color: lightgray;
     z-index: 2;
     cursor: pointer;
+  }
+  .placeholder-product{
+    width: 180px;
+    height: 250px;
+    border: 1px solid black;
+  }
+  ul {
+    list-style-type: none;
+  }
+  li {
+    font-size: 32px;
+  }
+  .close-btn {
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
   }

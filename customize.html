@@ -15,7 +15,10 @@
   </head>
   <body>
 
-    <div class="container-fluid bg Purple-text">  
+    <div class="container-fluid bg Purple-text">
+      
+      <!-- Navbar -->
+
       <nav>
           <div class="row d-flex justify-content-center">
               <div class="text-center col-lg-2 col-md-2 col-sm-2 col-2 p-0 mt-5">
@@ -34,22 +37,70 @@
                   <div class="line mt-5 d-none d-md-flex d-lg-flex"></div>
               </div>
               <div class="text-center col-lg-2 col-md-2 col-sm-2 col-2 p-0 mt-5">
-                  <div id="overlay" onclick="off()">
+
+                <!-- Cart Overlay -->
+
+                  <div id="overlay">
+                    <button onclick="off()" class="close-btn float-end">X</button>
                     <div class="container text-center">
-                      <div class="row row-cols-4">
-                        <div class="col-4">
-                          <h3>Product</h3>
+                      <div class="row p-2 pt-4">
+                        <div class="col">
+                          <h3 class="pb-3">Product</h3>
+                          <ul>
+                            <li>
+                              <div class="placeholder-product"></div>
+                            </li>
+                          </ul>
                         </div>
                         <div class="col">
-                          <h3>Price</h3>
+                          <h3 class="pb-3">Price</h3>
+                          <ul>
+                            <li>
+                              <div class="display-6">$19.99</div>
+                            </li>
+                          </ul>
                         </div>
                         <div class="col">
-                          <h3>Quantity</h3>
+                          <h3 class="pb-3">Quantity</h3>
+                          <ul>
+                            <li>
+                              <p><button class="px-2 mx-2">+</button>1<button class="px-2 mx-2">-</button></p>
+                            </li>
+                          </ul>
                         </div>
+                      </div>
+                      <div class="row">
+                        <div class="col display-6 ">
+                          <p class="float-start">
+                            Subtotal: 
+                          </p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col display-6 ">
+                          <p class="float-start">
+                            Tax: 
+                          </p>
+                        </div>
+                      </div>
+                      <div class="row">
+                          <div class="col dropdown">
+                              <button class="btn btn-primary dropdown-toggle float-start" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Shipping
+                              </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                          </div>
                       </div>
                     </div>
                     <button class="display-6">Checkout</button>
                   </div>
+
+                  <!-- -->
+
                   <button class="btn" onclick="on()">
                       <span class="material-symbols-outlined cart">
                         shopping_cart
@@ -59,6 +110,9 @@
               </div>
           </div>
       </nav>
+
+      <!-- -->
+
         <div class="row">
           <div class="col text-center display-3 pt-3">Customize Your Product</div>
         </div>
