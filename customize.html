@@ -34,32 +34,27 @@
                   <div class="line mt-5 d-none d-md-flex d-lg-flex"></div>
               </div>
               <div class="text-center col-lg-2 col-md-2 col-sm-2 col-2 p-0 mt-5">
-                <div class="dropdown">
-                  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <div id="overlay" onclick="off()">
+                    <div class="container text-center">
+                      <div class="row row-cols-4">
+                        <div class="col-4">
+                          <h3>Product</h3>
+                        </div>
+                        <div class="col">
+                          <h3>Price</h3>
+                        </div>
+                        <div class="col">
+                          <h3>Quantity</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="display-6">Checkout</button>
+                  </div>
+                  <button class="btn" onclick="on()">
                       <span class="material-symbols-outlined cart">
                         shopping_cart
                       </span>
                   </button>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <div class="container">
-                        <div class="row">
-                          <div class="col">
-                            Product
-                          </div>
-                          <div class="col">
-                            Price
-                          </div>
-                          <div class="col">
-                            Quantity
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </div>
                 <div class="line mt-5 d-none d-md-flex d-lg-flex"></div>
               </div>
           </div>
