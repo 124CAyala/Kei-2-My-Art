@@ -1,4 +1,10 @@
 .productImg{
-    width: 1500px;
+    width: auto;
     height: 500px;
+}
+.img-fluid{ 
+    width: 60%;
+}
+.productRow{
+    line-height: 50%;
 }
