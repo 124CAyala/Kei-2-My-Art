@@ -24,7 +24,11 @@ app.component('cart-item', {
     <div class="col">
       <ul>
         <li>
-          <p><button class="px-2 mx-2">+</button>1<button class="px-2 mx-2">-</button></p>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" id="plus" class="btn btn-primary px-2 mx-2">+</button>
+                <div><p style="color: aliceblue;" id="quantity">1</p></div>
+            <button type="button" id="minus" class="px-2 mx-2 btn btn-primary">-</button>
+        </div>
         </li>
       </ul>
      </div>

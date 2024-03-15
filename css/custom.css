@@ -33,7 +33,7 @@ input{
 }
 .bg{
     background-color: #FFF0F9;
-    height: 100vh;
+    height: 200vh;
 }
 .Customize-img{
     padding-right: 50px;
@@ -87,3 +87,6 @@ table {
     background-color: transparent;
     border: none;
   }
+.spacing{
+margin-bottom: 1rem;
+}
