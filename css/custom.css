@@ -51,6 +51,10 @@ table {
 .material-symbols-outlined {
     font-size: 45px;
 }
+.Info{
+    padding-left: 18rem;
+    padding-right: 18rem;
+}
 .cart {
     font-size: clamp(16px, 3vw, 32px );
     padding-bottom: 7px;
