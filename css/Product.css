@@ -6,5 +6,9 @@
     width: 60%;
 }
 .productRow{
-    line-height: 50%;
+    height: 8rem;
 }
+.productQuantity{
+    height: 4rem;
+}
+
