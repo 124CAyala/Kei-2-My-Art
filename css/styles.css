@@ -6,6 +6,11 @@
      height: auto;
      width: clamp(3em, 15vw, 20em);
 }
+.footer-logo {
+     height: 75%;
+     width: auto;
+}
+
 .line {
      width: 100%;
      border-bottom: 3px #4B072D solid;
