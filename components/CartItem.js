@@ -34,15 +34,33 @@ app.component('cart-item', {
      </div>
   </div>`,
   data(){
-
+    return {
+      productName: '',
+      price: '',
+      quantity: null
+    }
   },
   methods: {
+    onSubmit() {
+      if (this.productName === '' || this.price === '' || this.quantity === null) {
+        alert('err.')
+        return
+      }
 
-  },
-  computed: {
-
+      const cartItem = {
+        productName: this.productName,
+        price: this.price,
+        quantity: this.quantity
+      }
+      this.$emit('add-to-cart', cartItem)
+      this.name = ''
+      this.text = ''
+      this.rating = null
+    }
+    addToCart(cartItem) {
+      this.reviews.push(cartItem)
+    }
   }
-
 })
 
   
