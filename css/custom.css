@@ -90,3 +90,6 @@ table {
 .spacing{
 margin-bottom: 1rem;
 }
+.customPic{
+    max-height: 28rem;
+}
