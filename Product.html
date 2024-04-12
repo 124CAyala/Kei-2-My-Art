@@ -16,17 +16,17 @@
 <div id="app" class="container">
     <div class="row productImg">        
         <div class="col m-5">
-            <img src="imgs/download1.png" alt="" id="selected-pic" class="img-fluid">
+            <img :src = "Product.image" alt="" id="selected-pic" class="img-fluid">
         </div>
         <div class="col">
             <div class="row productRow">
                 <div class="col"><h1 style="color: aliceblue;">{{ Product.name }}</h1></div>
             </div>
             <div class="row productRow">
-                <div class="col"><h2 style="color: aliceblue;">{{ Price }}</h2></div>
+                <div class="col"><h2 style="color: aliceblue;">{{ Product.price }}</h2></div>
             </div>  
             <div class="row productQuantity">
-                <div class="col"><h3 style="color: aliceblue;">Quantity</h3></div>
+                <div class="col"><h3 style="color: aliceblue;">{{Product.quantity}}</h3></div>
             </div>
             <button class=""></button>
             <div class="row  productRow">

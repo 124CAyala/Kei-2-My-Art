@@ -24,18 +24,18 @@
       <nav>
           <div class="row d-flex justify-content-center">
               <div class="text-center col-lg-2 col-md-2 col-sm-2 col-2 p-0 mt-5">
-                  <button class="btn"><h1 class="nav-item">About</h1></button>
+                  <a href="index.html#About" class="btn"><h1 class="nav-item">About</h1></a>
                   <div class="line mt-5 d-none d-md-flex d-lg-flex"></div>
               </div>
               <div class="text-center col-lg-2 col-md-2 col-sm-2 col-2 p-0 mt-5">
-                  <button class="btn"><h1 class="nav-item">Gallery</h1></button>
+                  <a href="index.html#Gallery" class="btn"><h1 class="nav-item">Gallery</h1></a>
                   <div class="line mt-5 d-none d-md-flex d-lg-flex"></div>
               </div>
               <div class="text-center col-lg-2 col-md-2 col-sm-2 col-2 mt-4">
                   <img src="imgs/logo.png" alt="Kei2MyArt" class="logo">
               </div>
               <div class="text-center col-lg-2 col-md-2 col-sm-2 col-2 p-0 mt-5">
-                  <button class="btn"><h1 class="nav-item">Customize</h1></button>
+                  <a href="index.html#Shop" class="btn"><h1 class="nav-item">Shop</h1></a>
                   <div class="line mt-5 d-none d-md-flex d-lg-flex"></div>
               </div>
               <div class="text-center col-lg-2 col-md-2 col-sm-2 col-2 p-0 mt-5">
@@ -48,7 +48,7 @@
 
                 <!-- -->
 
-                <button v-on:click="navigateTo('cart')">
+                <button class="btn" v-on:click="navigateTo('cart')">
                       <span class="material-symbols-outlined cart">
                         shopping_cart
                       </span>
@@ -57,12 +57,6 @@
               </div>
           </div>
       </nav>
-
-      <!-- -->
-      <div v-if="page === 'cart'">
-        <Cart v-on:removeItemFromCart="removeItemFromCart" :cart="cart" />
-      </div>
-      <!--  -->
   
       <div v-if="page === 'products'">
         <div class="row">
@@ -88,40 +82,7 @@
           </div>
         </div>
         <br>
-        <div class="row spacing Info">
-          <div class="col"><h3>First Name:</h3></div>
-          <div class="col"> <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></div>
-        </div> 
-        <div class="row spacing Info">
-          <div class="col"><h3>Last Name:</h3></div>
-          <div class="col"> <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></div>
-        </div>
-        <div class="row spacing Info">
-          <div class="col"><h3>Address:</h3></div>
-          <div class="col"> <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></div>
-        </div>
-        <div class="row spacing Info">
-          <div class="col"><h3>State:</h3></div>
-          <div class="col"> <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></div>
-        </div>
-        <div class="row spacing Info">
-          <div class="col"><h3>Country:</h3></div>
-          <div class="col"> <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></div>
-        </div>
-        <div class="row spacing Info">
-          <div class="col"><h3>Phone #:</h3></div>
-          <div class="col"> <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></div>
-        </div>
-        <div class="row spacing Info">
-          <div class="col"><h3>Email:</h3></div>
-          <div class="col"> <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></div>
-        </div>
-        <!-- <div class="row pt-5">
-          <div class="col-12 text-center">
-            <p class="text-center display-6">Additional Information (optional)</p>
-            <textarea placeholder="Size, color and other specifications here" class="trans" rows="6" cols="120"></textarea>
-          </div>
-        </div> -->
+
         <div class="row">
           <div class="col d-flex justify-content-center">
             <button v-on:click="addItemToCart(product)">Add To Cart</button>
