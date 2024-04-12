@@ -1,5 +1,6 @@
 import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
 import Cart from './components/Cart.js';
+import Product from '/components/Products.js';
 
 
 const app = createApp({
@@ -36,7 +37,7 @@ const app = createApp({
   });
 
   app.component('cart', Cart)
-  
+  app.component('product', Product)
   // Mount the app to the "#app" element
   app.mount('#app')
 
