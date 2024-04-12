@@ -8,16 +8,11 @@ export default {
     //         {{ product.name }}
     //         <img class="image" :src="product.image" />
     //         <div>{{ product.cost }}</div>
-    //         <button @click="removeItemFromCart(product)">Remove From Cart</button>
     //       </div>
     //     </div>
     //   </div>
     `,
     props: ['cart'],
-    methods: {
-      removeItemFromCart(product) {
-        this.$emit('removeItemFromCart', product);
-      },
-    },
+
   };
 
