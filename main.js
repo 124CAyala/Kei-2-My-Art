@@ -1,6 +1,6 @@
 import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
 import Cart from './components/Cart.js';
-import Product from '/components/Products.js';
+import Products from '/components/Products.js';
 
 
 const app = createApp({
@@ -8,43 +8,6 @@ const app = createApp({
       return {
             page: "products",
             cart: [],
-            products: [
-            {
-              type: "Glasses",
-              name: "Wine Glass",
-              cost: "19.99",
-              image: 'imgs/wineglass.jpg',
-              quantity: 0
-            },
-            {
-              type: "Bottles",
-              name: "Wine Bottle",
-              cost: "9.99",
-              image: 'https://www.americasfinestlabels.com/includes/work/image_cache/4b4f4b63cc837b5f01ce2d718b0f9be2.thumb.jpg',
-              quantity: 0
-            },
-            {
-              type: "Cartons",
-              name: "Blue Carton",
-              cost: "9.99",
-              image: 'imgs/blueCarton.webp',
-              quantity: 0
-            },
-            {
-              type: "Bottles",
-              name: "Wine Bottle",
-              cost: "9.99",
-              image: 'https://www.americasfinestlabels.com/includes/work/image_cache/4b4f4b63cc837b5f01ce2d718b0f9be2.thumb.jpg',
-              quantity: 0
-            },
-            {
-              type: "Bottles",
-              name: "Wine Bottle",
-              cost: "9.99",
-              image: 'https://www.americasfinestlabels.com/includes/work/image_cache/4b4f4b63cc837b5f01ce2d718b0f9be2.thumb.jpg',
-              quantity: 0
-            },
-        ]
       }
     },
     methods: {
@@ -55,6 +18,10 @@ const app = createApp({
         navigateTo(page) {
             this.page = page;
           },
+        typeOfProduct(type) {
+          this.page = type;
+          console.log('working');
+        },
         removeItemFromCart(product) {
             this.cart.splice(this.cart.indexOf(product), 1);
           }
@@ -62,7 +29,7 @@ const app = createApp({
   });
 
   app.component('cart', Cart)
-  app.component('product', Product)
+  app.component('products', Products)
   // Mount the app to the "#app" element
   app.mount('#app')
 

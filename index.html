@@ -14,7 +14,7 @@
     <title>Document</title>
 </head>
 <body>
-  <div id="app"></div>
+  <div id="app">
     <div class="container-fluid bg Purple-text" id="navbar">
         <nav>
             <div class="row d-flex justify-content-center">
@@ -160,19 +160,19 @@
         </div>
         <div class="row d-flex justify-content-evenly text-center">
             <div class="col-4 ">
-                <a class="btn cat-btn" href="cartons.html">
+                <a class="btn cat-btn" href="products.html" v-on:click="filterProducts('Cartons')">
                     <img src="imgs/carton-category.jpg" alt="cartons" class="img-fluid text-center categories">
                     <div class="display-6 text-center text-light">Cartons</div>
                 </a>
             </div>
             <div class="col-4">
-                <a class="btn cat-btn" href="glasses.html">
+                <a class="btn cat-btn" href="products.html" v-on:click="typeOfProduct('glasses')">
                     <img src="imgs/glasses-category.JPG" alt="glasses" class="img-fluid text-center categories">
                     <div class="display-6 text-center text-light">Glasses</div>
                 </a>
             </div>
             <div class="col-4">
-                <a class="btn cat-btn" href="tumblers.html">
+                <a class="btn cat-btn" href="products.html" v-on:click="typeOfProduct('tumblers')">
                     <img src="imgs/tumblers-category.JPG" alt="tumblers" class="img-fluid text-center categories">
                     <div class="display-6 text-center text-light">Tumblers</div>
                 </a>
@@ -180,13 +180,13 @@
         </div>
         <div class="row d-flex justify-content-evenly text-center mt-3">
             <div class="col-4">
-                <a class="btn cat-btn" href="ornaments.html">
+                <a class="btn cat-btn" href="products.html" v-on:click="typeOfProduct('ornaments')">
                     <img src="imgs/ornament-cat.jpg" alt="ornaments" class="img-fluid text-center categories">
                     <div class="display-6 text-center text-light">Ornaments</div>
                 </a>
             </div>
             <div class="col-4">
-                <a class="btn cat-btn" href="bottles.html">
+                <a class="btn cat-btn" href="products.html" v-on:click="typeOfProduct('bottles')">
                     <img src="imgs/julia.jpg" alt="bottles" class="img-fluid text-center categories">
                     <div class="display-6 text-center text-light">Bottles</div>
                 </a>
@@ -243,8 +243,10 @@
                 
             </div>
         </div>
+      </div>
     <script type="module" src="main.js"></script>
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</body>
+  
+  </body>
 </html>
