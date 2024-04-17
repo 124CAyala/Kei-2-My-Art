@@ -10,12 +10,35 @@ const app = createApp({
             cart: [],
             products: [
             {
+              type: "Glasses",
               name: "Wine Glass",
               cost: "19.99",
               image: 'imgs/wineglass.jpg',
               quantity: 0
             },
             {
+              type: "Bottles",
+              name: "Wine Bottle",
+              cost: "9.99",
+              image: 'https://www.americasfinestlabels.com/includes/work/image_cache/4b4f4b63cc837b5f01ce2d718b0f9be2.thumb.jpg',
+              quantity: 0
+            },
+            {
+              type: "Cartons",
+              name: "Blue Carton",
+              cost: "9.99",
+              image: 'imgs/blueCarton.webp',
+              quantity: 0
+            },
+            {
+              type: "Bottles",
+              name: "Wine Bottle",
+              cost: "9.99",
+              image: 'https://www.americasfinestlabels.com/includes/work/image_cache/4b4f4b63cc837b5f01ce2d718b0f9be2.thumb.jpg',
+              quantity: 0
+            },
+            {
+              type: "Bottles",
               name: "Wine Bottle",
               cost: "9.99",
               image: 'https://www.americasfinestlabels.com/includes/work/image_cache/4b4f4b63cc837b5f01ce2d718b0f9be2.thumb.jpg',

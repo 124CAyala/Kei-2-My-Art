@@ -1,18 +1,13 @@
 export default {
 
      template: `
-    //   <div>
-    //     <h1>Product</h1>
-    //     <div class="products">
-    //       <div v-for="(product, index) in cart" :key="index">
-    //         {{ product.name }}
-    //         <img class="image" :src="product.image" />
-    //         <div>{{ product.cost }}</div>
-    //       </div>
-    //     </div>
-    //   </div>
+
+     <div class="col-3">
+     <button class="btn" id="blue"><img class="cat-img-cartons" src="image" alt=""></button>
+     </div>
     `,
-    props: ['cart'],
+    props: ['Bottles, Tumblers, Glasses, Ornaments, Cartons'],
+    
 
   };
 
