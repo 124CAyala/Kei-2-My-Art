@@ -1,62 +1,71 @@
-import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
-import Cart from './components/Cart.js';
-import Products from '/components/Products.js';
+
+import Cart from "./components/Cart.js";
+import Products from "/components/Products.js";
+import Customize from "./components/Customize.js";
 
 
-const app = createApp({
-    data() {
-      return {
-            page: "products",
-            cart: [],
-      }
+const store = Vuex.createStore({
+  state: {
+    selectedProduct: null,
+  },
+  mutations: {
+    setSelectedProduct(state, product) {
+      state.selectedProduct = product;
+      console.log(state.selectedProduct);
+      window.location.href = 'customize.html';
     },
-    methods: {
-        addItemToCart(product) {
-            this.cart.push(product);
-            console.log(this.cart);
-          },
-        navigateTo(page) {
-            this.page = page;
-          },
-        typeOfProduct(type) {
-          this.page = type;
-          console.log('working');
-        },
-        removeItemFromCart(product) {
-            this.cart.splice(this.cart.indexOf(product), 1);
-          }
-    }
-  });
+  },
+  actions: {
+    setSelectedProduct({ commit }, product) {
+      commit("setSelectedProduct", product);
+    },
+  },
+  getters: {
+    selectedProduct(state) {
+      console.log(state.selectedProduct);
+      return state.selectedProduct;
+    },
+  }
+});
 
-  app.component('cart', Cart)
-  app.component('products', Products)
-  // Mount the app to the "#app" element
-  app.mount('#app')
+const app = Vue.createApp({
+  data() {
+    return {
+      store: this.$store,
+      page: "products",
+      cart: [],
+    };
+  },
+  methods: {
+    // addItemToCart(product) {
+    //   this.cart.push(product);
+    //   console.log(this.cart);
+    // },
+    navigateTo(page) {
+      this.page = page;
+    },
+    typeOfProduct(type) {
+      this.page = type;
+      console.log("working");
+    },
+    // removeItemFromCart(product) {
+    //   this.cart.splice(this.cart.indexOf(product), 1);
+    // },
+  },
+});
 
 
-// import { createApp, ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
-//     createApp({
-//     setup() {
-//       const message = ref('Test vue!')
-//       return {
-//         message
-//       }
-//     },
-//     data: () => {
-//         return {
-            
-//           ]
-//         }
-//        },
-//        methods: {
-        
-//         // addItemToCart(product) {
-//         //     this.$emit('addItemToCart', product)
-//         // }
-//        },
-//        components: {
-//         Cart
-//       }
 
-//   }).mount('#app')
-  
+app.component("cart", Cart);
+app.component("products", Products);
+app.component("customize", {
+  extends: Customize, // Use extends to inherit from Customize component
+  props: ['store'], // Define the store prop
+  setup(props) {
+    return { store: props.store }; // Pass the store prop to the component's setup function
+  }
+});
+// Mount the app to the "#app" element
+app.use(store);
+app.mount('#app');
+console.log("App Mounted");
