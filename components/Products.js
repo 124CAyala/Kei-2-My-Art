@@ -15,7 +15,7 @@ export default {
       <!-- Display product information here -->
       <p>{{ product.name }}</p>
       <p>{{ product.cost }}</p>
-      <button v-on:click="selectProduct(product)">Select This Product</button>
+      <router-link to="/customize" v-on:click="selectProduct(product)">Select This Product</router-link>
       <!-- Add more product details as needed -->
     </div>
 

@@ -4,6 +4,14 @@ import Products from "/components/Products.js";
 import Customize from "./components/Customize.js";
 
 
+const router = VueRouter.createRouter({
+  history: VueRouter.createWebHistory(),
+  routes: [
+    { path: '/customize', component: Customize },
+  ]
+});
+
+
 const store = Vuex.createStore({
   state: {
     selectedProduct: null,
@@ -56,6 +64,7 @@ const app = Vue.createApp({
 
 
 
+
 app.component("cart", Cart);
 app.component("products", Products);
 app.component("customize", {
@@ -66,6 +75,6 @@ app.component("customize", {
   }
 });
 // Mount the app to the "#app" element
+app.use(router);
 app.use(store);
 app.mount('#app');
-console.log("App Mounted");
