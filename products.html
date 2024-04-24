@@ -47,12 +47,12 @@
                     <!-- Cart Overlay -->
 
                     <div v-if="page === 'cart'">
-                        <Cart v-on:removeItemFromCart="removeItemFromCart" :cart="cart" />
+                        <Cart v-on:removeItemFromCart="removeItemFromCart" />
                     </div>
 
                     <!-- -->
 
-                    <button class="btn" v-on:click="navigateTo('cart')">
+                    <button class="btn" @click="toggleCart">
                         <span class="material-symbols-outlined cart">
                             shopping_cart
                         </span>
@@ -62,8 +62,16 @@
             </div>
         </nav>
 
-        <Products />
 
+        <div v-if="page === 'products'">
+            <Products />
+        </div>
+
+
+        <div v-if="page === 'customize'">
+            <Customize :store="store" />
+        </div>
+        
 
 
     </div>

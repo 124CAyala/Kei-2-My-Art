@@ -1,10 +1,9 @@
-
 export default {
-    template: `
+  template: `
       <div>
         <h1>My Cart</h1>
         <div class="products">
-          <div v-for="(product, index) in cart" :key="index">
+          <div v-for="(product, index) in fetchCart" :key="index">
             {{ product.name }}
             <img class="image" :src="product.image" />
             <div>{{ product.cost }}</div>
@@ -13,24 +12,20 @@ export default {
         </div>
       </div>
     `,
-    props: ['cart'],
-    methods: {
-      removeItemFromCart(product) {
-        this.$emit('removeItemFromCart', product);
-      },
+  
+  computed: {
+    fetchCart() {
+      return this.$store.state.cart
     },
-  };
-
-
-
-
-
-
+  },
+  methods: {
+    removeItemFromCart(product) {
+      this.$emit("removeItemFromCart", product);
+    },
+  },
+};
 
 // import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
-
-
-
 
 // const app = createApp({})
 
@@ -63,4 +58,3 @@ export default {
 //         },
 //     },
 // };
-
