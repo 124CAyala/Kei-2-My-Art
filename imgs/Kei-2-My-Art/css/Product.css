@@ -1,0 +1,14 @@
+.productImg{
+    width: auto;
+    height: 500px;
+}
+.img-fluid{ 
+    width: 60%;
+}
+.productRow{
+    height: 8rem;
+}
+.productQuantity{
+    height: 4rem;
+}
+
