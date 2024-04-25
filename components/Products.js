@@ -3,18 +3,33 @@
 export default {
   template: `
      <div>
+     <div class="row">
+            <div class="col-3 offset-1">
       <h1>{{ selectedType || 'All Products' }}</h1>
-      <button @click="filterProducts(null)">View All Products</button>
-      <button @click="filterProducts('Cartons')">Cartons</button>
-      <button @click="filterProducts('Bottles')">Bottles</button>
-      <button @click="filterProducts('Glasses')">Glasses</button>
-      <button @click="filterProducts('Ornaments')">Ornaments</button>
-      <button @click="filterProducts('Tumblers')">Tumblers</button>
-      
-      <div v-for="product in filteredProducts" :key="product.id">
+        <ul class="category">
+          <li><a v-on:click="navigateTo('bottles')" type="button" class="btn" role="button">Bottles</a></li>
+          <li><a v-on:click="navigateTo('tumbler')" type="button" class="btn" role="button">Tumblers</a></li>     
+          <li><a v-on:click="navigateTo('Glasses')" type="button" class="btn" role="button">Glasses</a></li>
+          <li><a v-on:click="navigateTo('Ornaments')" type="button" class="btn" role="button">Ornaments</a></li>
+          <li><a v-on:click="navigateTo('Cartons')" type="button" class="btn" role="button">Cartons</a></li>
+        </ul>
+          </div>
+
+        
       <!-- Display product information here -->
-      <p>{{ product.name }}</p>
-      <p>{{ product.cost }}</p>
+
+      <div class="col category-gallery">
+      <div class="row d-flex justify-content-around">
+      <div class="col list">
+      <div v-for="product in filteredProducts" :key="product.id">
+          <button class="btn" id="blue"><img class="cat-img-cartons" src="{{ product.img }}" alt=""></button>
+          <p>{{ product.name }}</p>
+          <p>{{ product.cost }}</p>
+      </div>
+
+      </div>
+      </div>
+      </div>
       
        <button v-on:click="selectProduct(product)">Select This Product</button>
       <!-- Add more product details as needed -->
