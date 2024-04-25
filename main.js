@@ -103,7 +103,6 @@ const store = Vuex.createStore({
       state.cartVisible = !state.cartVisible;
       if (state.cartVisible === true) {
         state.page = "cart";
-        console.log("working");
       } else {
         state.page = "products";
       }

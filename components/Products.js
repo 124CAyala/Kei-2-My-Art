@@ -53,7 +53,7 @@ export default {
       this.$store.dispatch('setSelectedProduct', product);
       // Navigate to the next page (you can use router-link or window.location)
       // this.page = "customize";
-      
+
     },
   },
   //   selectedItem(product) {
