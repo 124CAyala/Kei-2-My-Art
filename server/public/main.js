@@ -1,6 +1,7 @@
-import Cart from "./server/public/Cart.js";
+import Cart from "./components/Cart.js";
 import Products from "/components/Products.js";
 import Customize from "./components/Customize.js";
+import Home from "./components/Home.js";
 
 // const router = VueRouter.createRouter({
 //   history: VueRouter.createWebHistory(),
@@ -50,7 +51,7 @@ const store = Vuex.createStore({
   state: {
     cartVisible: false,
     selectedProduct: null,
-    page: "products",
+    page: "home",
     cart: [],
     products: [
       {
@@ -120,6 +121,9 @@ const store = Vuex.createStore({
     addItemToCart(state) {
       state.cart.push(state.selectedProduct);
     },
+    setProducts(state) {
+      state.page = 'products'
+    }
   },
   actions: {
     setSelectedProduct({ commit }, product) {
@@ -131,6 +135,9 @@ const store = Vuex.createStore({
     addItemToCart({ commit }) {
       commit("addItemToCart");
     },
+    setProducts({ commit }) {
+      commit("setProducts");
+    }
   },
   getters: {
     selectedProduct(state) {
@@ -152,6 +159,7 @@ app.component("customize", {
     return { store: props.store }; // Pass the store prop to the component's setup function
   },
 });
+app.component("home", Home);
 // Mount the app to the "#app" element
 // app.use(router);
 app.use(store);

@@ -7,11 +7,11 @@ export default {
             <div class="col-3 offset-1">
       <h1>{{ selectedType || 'All Products' }}</h1>
         <ul class="category">
-          <li><a v-on:click="navigateTo('bottles')" type="button" class="btn" role="button">Bottles</a></li>
-          <li><a v-on:click="navigateTo('tumbler')" type="button" class="btn" role="button">Tumblers</a></li>     
-          <li><a v-on:click="navigateTo('Glasses')" type="button" class="btn" role="button">Glasses</a></li>
-          <li><a v-on:click="navigateTo('Ornaments')" type="button" class="btn" role="button">Ornaments</a></li>
-          <li><a v-on:click="navigateTo('Cartons')" type="button" class="btn" role="button">Cartons</a></li>
+          <li><button @click="filterProducts('Bottles')" type="button" class="btn" role="button">Bottles</button></li>
+          <li><button @click="filterProducts('Tumblers')" type="button" class="btn" role="button">Tumblers</button></li>     
+          <li><button @click="filterProducts('Glasses')" type="button" class="btn" role="button">Glasses</button></li>
+          <li><button @click="filterProducts('Ornaments')" type="button" class="btn" role="button">Ornaments</button></li>
+          <li><button @click="filterProducts('Cartons')" type="button" class="btn" role="button">Cartons</button></li>
         </ul>
           </div>
 
@@ -22,16 +22,17 @@ export default {
       <div class="row d-flex justify-content-around">
       <div class="col list">
       <div v-for="product in filteredProducts" :key="product.id">
-          <button class="btn" id="blue"><img class="cat-img-cartons" src="{{ product.img }}" alt=""></button>
+          <img class="cat-img-cartons" :src="product.image" alt="">
           <p>{{ product.name }}</p>
           <p>{{ product.cost }}</p>
+          <button v-on:click="selectProduct(product)" class="btn btn-primary">Select This Product</button>
       </div>
 
       </div>
       </div>
       </div>
       
-       <button v-on:click="selectProduct(product)">Select This Product</button>
+       
       <!-- Add more product details as needed -->
     </div>
 

@@ -3,7 +3,7 @@
     color: white;
 }
 body {
-    background-color: #4B072D;
+    background-color: #FFF0F9;
 }
 .category li {
     list-style-type: none;
@@ -37,9 +37,9 @@ body {
     border: 3px solid pink;
     color: pink;
 }
-.btn {
+/* .btn {
     color: white;
-}
+} */
 .cat-btn:hover {
     border: 2px #4B072D solid;
 }
@@ -50,3 +50,7 @@ body {
     height: 77%;
     width: 100%;
 }
+.list{
+    display: grid;
+    grid-template-columns: auto auto;
+  }

@@ -50,7 +50,7 @@ export default {
           console.log(url)
           window.location = url
       }).catch(e => {
-          console.error(e.error)
+          console.error('err')
       })
     },
   },

@@ -1,74 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="imgs/logo.png">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-  <link href="https://fonts.googleapis.com/css2?family=Stoke&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-  <title>Document</title>
-</head>
-
-<body>
-  <div id="app">
-    
-    <div v-if="page === 'cart'">
-      <Cart v-on:removeItemFromCart="removeItemFromCart" />
-    </div>
-
-    <div>
-      <div class="container-fluid bg Purple-text" id="navbar">
-        <nav>
-          <div class="row d-flex justify-content-center">
-            <div class="text-center col-lg-2 col-md-2 col-sm-2 col-2 p-0 mt-5">
-              <a href="index.html#About" class="btn">
-                <h1 class="nav-item">About</h1>
-              </a>
-              <div class="line mt-5 d-none d-md-flex d-lg-flex"></div>
-            </div>
-            <div class="text-center col-lg-2 col-md-2 col-sm-2 col-2 p-0 mt-5">
-              <a href="index.html#Gallery" class="btn">
-                <h1 class="nav-item">Gallery</h1>
-              </a>
-              <div class="line mt-5 d-none d-md-flex d-lg-flex"></div>
-            </div>
-            <div class="text-center col-lg-2 col-md-2 col-sm-2 col-2 mt-4">
-              <img src="imgs/logo.png" alt="Kei2MyArt" class="logo">
-            </div>
-            <div class="text-center col-lg-2 col-md-2 col-sm-2 col-2 p-0 mt-5">
-              <a href="index.html#Shop" class="btn">
-                <h1 class="nav-item">Shop</h1>
-              </a>
-              <div class="line mt-5 d-none d-md-flex d-lg-flex"></div>
-            </div>
-            <div class="text-center col-lg-2 col-md-2 col-sm-2 col-2 p-0 mt-5">
-
-              <!-- Cart Overlay -->
-
-
-
-              <!-- -->
-
-              <button class="btn" @click="toggleCart">
-                <span class="material-symbols-outlined cart">
-                  shopping_cart
-                </span>
-              </button>
-              <div class="line mt-5 d-none d-md-flex d-lg-flex"></div>
-            </div>
-          </div>
-        </nav>
-      </div>
-
-      <div class="container-fluid bg py-5">
+export default {
+    template: `
+    <div class="container-fluid bg py-5">
         <div class="row">
           <div class="col-6 m-text">
             <h1 class="display-3 Purple-text">Handmade tumblers, glasses, bottles, ornaments</h1>
@@ -111,36 +43,36 @@
         </div>
         <div class="row d-flex justify-content-evenly text-center">
           <div class="col-4 ">
-            <a class="btn cat-btn" href="products.html" v-on:click="filterProducts('Cartons')">
+            <button class="btn cat-btn" @click="toProducts()">
               <img src="imgs/carton-category.jpg" alt="cartons" class="img-fluid text-center categories">
               <div class="display-6 text-center text-light">Cartons</div>
-            </a>
+            </button>
           </div>
           <div class="col-4">
-            <a class="btn cat-btn" href="products.html" v-on:click="typeOfProduct('glasses')">
+          <button class="btn cat-btn" @click="toProducts()">
               <img src="imgs/glasses-category.JPG" alt="glasses" class="img-fluid text-center categories">
               <div class="display-6 text-center text-light">Glasses</div>
-            </a>
+            </button>
           </div>
           <div class="col-4">
-            <a class="btn cat-btn" href="products.html" v-on:click="typeOfProduct('tumblers')">
+          <button class="btn cat-btn" @click="toProducts()">
               <img src="imgs/tumblers-category.JPG" alt="tumblers" class="img-fluid text-center categories">
               <div class="display-6 text-center text-light">Tumblers</div>
-            </a>
+            </button>
           </div>
         </div>
         <div class="row d-flex justify-content-evenly text-center mt-3">
           <div class="col-4">
-            <a class="btn cat-btn" href="products.html" v-on:click="filteredProducts(Ornaments)">
+          <button class="btn cat-btn" @click="toProducts()">
               <img src="imgs/ornament-cat.jpg" alt="ornaments" class="img-fluid text-center categories">
               <div class="display-6 text-center text-light">Ornaments</div>
-            </a>
+            </button>
           </div>
           <div class="col-4">
-            <a class="btn cat-btn" href="products.html" v-on:click="typeOfProduct('bottles')">
+          <button class="btn cat-btn" @click="toProducts()">
               <img src="imgs/julia.jpg" alt="bottles" class="img-fluid text-center categories">
               <div class="display-6 text-center text-light">Bottles</div>
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -212,16 +144,12 @@
 
         </div>
       </div>
-    </div>
+    `,
+    methods: {
+        toProducts() {
+            this.$store.dispatch('setProducts');
+        }
+        
+    }
 
-  </div>
-  <script type="module" src="main.js"></script>
-  <script src="https://unpkg.com/vuex@next"></script>
-  <script src="js/script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-
-</body>
-
-</html>
+}

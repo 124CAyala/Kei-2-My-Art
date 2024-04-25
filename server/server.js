@@ -39,6 +39,26 @@ app.post('/create-checkout-session', async (req, res) => {
         res.status(500).json({ error: e.message })
     }
     
-})
+});
 
-app.listen(3000)
+
+// Serve index.html for the root URL ("/")
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/public/index.html');
+});
+
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
+
+// try {
+//     app.listen(3001, () => {
+//         console.log("Server is running on port 3001");
+//     });
+// } catch (error) {
+//     console.error("Error starting server:", error);
+// }
+
+
+// app.listen(3001)
