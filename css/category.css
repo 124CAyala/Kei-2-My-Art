@@ -50,3 +50,7 @@ body {
     height: 77%;
     width: 100%;
 }
+.list{
+    display: grid;
+    grid-template-columns: auto auto;
+  }

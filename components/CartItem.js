@@ -56,7 +56,7 @@ app.component('cart-item', {
       this.name = ''
       this.text = ''
       this.rating = null
-    }
+    },
     addToCart(cartItem) {
       this.reviews.push(cartItem)
     }
