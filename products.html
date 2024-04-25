@@ -46,9 +46,7 @@
 
                     <!-- Cart Overlay -->
 
-                    <div v-if="page === 'cart'">
-                        <Cart v-on:removeItemFromCart="removeItemFromCart" />
-                    </div>
+
 
                     <!-- -->
 
@@ -63,6 +61,11 @@
         </nav>
 
 
+        <div v-if="page === 'cart'">
+            <Cart v-on:removeItemFromCart="removeItemFromCart" />
+        </div>
+        
+
         <div v-if="page === 'products'">
             <Products />
         </div>
@@ -71,11 +74,13 @@
         <div v-if="page === 'customize'">
             <Customize :store="store" />
         </div>
-        
+
 
 
     </div>
     <script type="module" src="./main.js"></script>
+
+    
 
     <!-- Vue.js -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -84,6 +89,7 @@
     <script src="https://unpkg.com/vue-router@4"></script>
 
     <script src="https://unpkg.com/vuex@next"></script>
+    <script src="server/public/script.js"></script>
 
 </body>
 

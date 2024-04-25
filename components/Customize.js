@@ -7,7 +7,7 @@ export default {
     <h1>Selected Product</h1>
     <p>{{ selectedProduct.name }}</p>
     <p>{{ selectedProduct.cost }}</p>
-    <button class="btn btn-primary" v-on:click="addItemToCart(selectedProduct)">Add To Cart</button>
+    <button id="addToCart" class="btn btn-primary" v-on:click="addItemToCart(selectedProduct)">Add To Cart</button>
   </div>`,
   computed: {
     selectedProduct() {
@@ -18,7 +18,7 @@ export default {
   methods: {
     addItemToCart(selectedProduct) {
       this.$store.dispatch("addItemToCart", selectedProduct);
-      console.log(selectedProduct)
+      document.getElementById("addToCart").disabled = true;
     },
     
   },

@@ -1,4 +1,4 @@
-import Cart from "./components/Cart.js";
+import Cart from "./server/public/Cart.js";
 import Products from "/components/Products.js";
 import Customize from "./components/Customize.js";
 
@@ -11,7 +11,7 @@ import Customize from "./components/Customize.js";
 
 const app = Vue.createApp({
   computed: {
-    ...Vuex.mapState(['page']),
+    ...Vuex.mapState(["page"]),
   },
   data() {
     return {
@@ -21,7 +21,6 @@ const app = Vue.createApp({
     };
   },
   methods: {
-    
     navigateTo(page) {
       this.page = page;
     },
@@ -31,18 +30,19 @@ const app = Vue.createApp({
     },
     navigateTo(page) {
       // Assuming you're dispatching an action to change the page
-      this.$store.dispatch('setPage', page);
+      this.$store.dispatch("setPage", page);
     },
     typeOfProduct(type) {
       // Assuming you're dispatching an action to handle product type
-      this.$store.dispatch('setSelectedProduct', type);
+      this.$store.dispatch("setSelectedProduct", type);
     },
     removeItemFromCart(product) {
       this.$store.cart.splice(this.cart.indexOf(product), 1);
     },
     toggleCart() {
-      this.$store.commit('toggleCartVisibility');
-    }
+      this.$store.commit("toggleCartVisibility");
+      console.log(this.$store.state.cart);
+    },
   },
 });
 
@@ -101,38 +101,38 @@ const store = Vuex.createStore({
   mutations: {
     toggleCartVisibility(state) {
       state.cartVisible = !state.cartVisible;
-      if (state.cartVisible = true) {
-        state.page = 'cart';
-        console.log("working")
+      if (state.cartVisible === true) {
+        state.page = "cart";
+        console.log("working");
+      } else {
+        state.page = "products";
       }
-      console.log(state.cartVisible)
+      console.log(state.cartVisible);
     },
     setSelectedProduct(state, product) {
       state.selectedProduct = product;
       if (state.selectedProduct !== null) {
-        state.page = 'customize';
+        state.page = "customize";
       }
     },
     setPage(state, page) {
       state.page = page;
     },
     addItemToCart(state) {
-      state.cart.push(state.selectedProduct)
-      console.log(state.cart[0])
+      state.cart.push(state.selectedProduct);
     },
   },
   actions: {
-    
     setSelectedProduct({ commit }, product) {
       commit("setSelectedProduct", product);
-      },
-      setPage({ commit }, page) {
-        commit("setPage", page);
-      },
-      addItemToCart({ commit }) {
-      commit("addItemToCart", )
     },
+    setPage({ commit }, page) {
+      commit("setPage", page);
     },
+    addItemToCart({ commit }) {
+      commit("addItemToCart");
+    },
+  },
   getters: {
     selectedProduct(state) {
       console.log(state.selectedProduct);
@@ -143,8 +143,6 @@ const store = Vuex.createStore({
     },
   },
 });
-
-
 
 app.component("cart", Cart);
 app.component("products", Products);
