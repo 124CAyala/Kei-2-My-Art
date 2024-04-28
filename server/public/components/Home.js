@@ -1,5 +1,40 @@
 export default {
     template: `
+
+    <nav>
+    <div class="row d-flex justify-content-center">
+      <div class="text-center col-lg-2 col-md-2 col-sm-2 col-2 p-0 mt-5">
+        <a href="index.html#About" class="btn">
+          <h1 class="nav-item">About</h1>
+        </a>
+        <div class="line mt-5 d-none d-md-flex d-lg-flex"></div>
+      </div>
+      <div class="text-center col-lg-2 col-md-2 col-sm-2 col-2 p-0 mt-5">
+        <a href="index.html#Gallery" class="btn">
+          <h1 class="nav-item">Gallery</h1>
+        </a>
+        <div class="line mt-5 d-none d-md-flex d-lg-flex"></div>
+      </div>
+      <div class="text-center col-lg-2 col-md-2 col-sm-2 col-2 mt-4">
+        <img src="../imgs/logo.png" alt="Kei2MyArt" class="logo">
+      </div>
+      <div class="text-center col-lg-2 col-md-2 col-sm-2 col-2 p-0 mt-5">
+        <a href="index.html#Shop" class="btn">
+          <h1 class="nav-item">Shop</h1>
+        </a>
+        <div class="line mt-5 d-none d-md-flex d-lg-flex"></div>
+      </div>
+      <div class="text-center col-lg-2 col-md-2 col-sm-2 col-2 p-0 mt-5">
+        <router-link class="btn" to="/cart">
+          <span class="material-symbols-outlined cart">
+            shopping_cart
+          </span>
+        </router-link>
+        <div class="line mt-5 d-none d-md-flex d-lg-flex"></div>
+      </div>
+    </div>
+  </nav>
+
     <div class="container-fluid bg py-5">
         <div class="row">
           <div class="col-6 m-text">
@@ -43,36 +78,37 @@ export default {
         </div>
         <div class="row d-flex justify-content-evenly text-center">
           <div class="col-4 ">
-            <button class="btn cat-btn" @click="toProducts()">
+          <router-link class="btn cat-btn" to="/products">
               <img src="imgs/carton-category.jpg" alt="cartons" class="img-fluid text-center categories">
               <div class="display-6 text-center text-light">Cartons</div>
-            </button>
+              </router-link>
           </div>
           <div class="col-4">
-          <button class="btn cat-btn" @click="toProducts()">
+          <router-link class="btn cat-btn" to="/products">
               <img src="imgs/glasses-category.JPG" alt="glasses" class="img-fluid text-center categories">
               <div class="display-6 text-center text-light">Glasses</div>
-            </button>
+              </router-link>
           </div>
           <div class="col-4">
-          <button class="btn cat-btn" @click="toProducts()">
+          <router-link class="btn cat-btn" to="/products">
               <img src="imgs/tumblers-category.JPG" alt="tumblers" class="img-fluid text-center categories">
               <div class="display-6 text-center text-light">Tumblers</div>
-            </button>
+              </router-link>
           </div>
         </div>
         <div class="row d-flex justify-content-evenly text-center mt-3">
           <div class="col-4">
-          <button class="btn cat-btn" @click="toProducts()">
+          
+          <router-link class="btn cat-btn" to="/products">
               <img src="imgs/ornament-cat.jpg" alt="ornaments" class="img-fluid text-center categories">
               <div class="display-6 text-center text-light">Ornaments</div>
-            </button>
+            </router-link>
           </div>
           <div class="col-4">
-          <button class="btn cat-btn" @click="toProducts()">
+          <router-link class="btn cat-btn" to="/products">
               <img src="imgs/julia.jpg" alt="bottles" class="img-fluid text-center categories">
               <div class="display-6 text-center text-light">Bottles</div>
-            </button>
+              </router-link>
           </div>
         </div>
       </div>

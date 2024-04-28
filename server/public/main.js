@@ -3,12 +3,17 @@ import Products from "/components/Products.js";
 import Customize from "./components/Customize.js";
 import Home from "./components/Home.js";
 
-// const router = VueRouter.createRouter({
-//   history: VueRouter.createWebHistory(),
-//   routes: [
-//     { path: '/customize', component: Customize },
-//   ]
-// });
+const routes = [
+  { path: '/', component: Home },
+  { path: '/products', component: Products },
+  { path: '/customize', component: Customize },
+  { path: '/cart', component: Cart }
+];
+
+const router = VueRouter.createRouter({
+  history: VueRouter.createWebHistory(),
+  routes
+});
 
 const app = Vue.createApp({
   computed: {
@@ -51,7 +56,7 @@ const store = Vuex.createStore({
   state: {
     cartVisible: false,
     selectedProduct: null,
-    page: "home",
+    // page: "home",
     cart: [],
     products: [
       {
@@ -150,6 +155,7 @@ const store = Vuex.createStore({
   },
 });
 
+
 app.component("cart", Cart);
 app.component("products", Products);
 app.component("customize", {
@@ -161,6 +167,6 @@ app.component("customize", {
 });
 app.component("home", Home);
 // Mount the app to the "#app" element
-// app.use(router);
+app.use(router);
 app.use(store);
 app.mount("#app");
