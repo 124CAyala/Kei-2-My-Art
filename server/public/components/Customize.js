@@ -45,7 +45,7 @@ export default {
   </div>`,
   computed: {
     selectedProduct() {
-      console.log(this.$store)
+      // console.log(this.$store)
       // Access selectedProduct from Vuex store directly
       return this.$store.state.selectedProduct;
     },
