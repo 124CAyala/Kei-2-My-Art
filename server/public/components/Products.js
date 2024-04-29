@@ -60,12 +60,7 @@ export default {
           <img class="cat-img-cartons" :src="product.image" alt="">
           <p>{{ product.name }}</p>
           <p>{{ product.cost }}</p>
-          <router-link class="btn" to="/products">
-          <span class="material-symbols-outlined cart">
-            shopping_cart
-          </span>
-        </router-link>
-        <router-link to"/customize" v-on:click="selectProduct(product)" class="btn btn-primary">Select This Product</router-link>
+        <router-link to="/customize" v-on:click="selectProduct(product)" class="btn btn-primary">Select This Product</router-link>
       </div>
 
       </div>
@@ -106,6 +101,7 @@ export default {
     },
     selectProduct(product) {
       // Dispatch the 'setSelectedProduct' action directly
+
       this.$store.dispatch('setSelectedProduct', product);
       // Navigate to the next page (you can use router-link or window.location)
       // this.page = "customize";

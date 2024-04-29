@@ -148,15 +148,15 @@ const store = Vuex.createStore({
         state.page = "customize";
       }
     },
-    setPage(state, page) {
-      state.page = page;
-    },
+    // setPage(state, page) {
+    //   state.page = page;
+    // },
     addItemToCart(state) {
       state.cart.push(state.selectedProduct);
     },
-    setProducts(state) {
-      state.page = 'products'
-    }
+    // setProducts(state) {
+    //   state.page = 'products'
+    // }
   },
   actions: {
     setSelectedProduct({ commit }, product) {
