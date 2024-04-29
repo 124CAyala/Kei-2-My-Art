@@ -65,7 +65,7 @@ const store = Vuex.createStore({
         name: "Wine Glass",
         cost: "19.99",
         image: "imgs/wineglass.jpg",
-        quantity: 0,
+        quantity: 0
       },
       {
         id: 2,
@@ -74,7 +74,7 @@ const store = Vuex.createStore({
         cost: "9.99",
         image:
           "https://www.americasfinestlabels.com/includes/work/image_cache/4b4f4b63cc837b5f01ce2d718b0f9be2.thumb.jpg",
-        quantity: 0,
+        quantity: 0
       },
       {
         id: 3,
@@ -82,7 +82,7 @@ const store = Vuex.createStore({
         name: "Blue Carton",
         cost: "9.99",
         image: "imgs/blueCarton.webp",
-        quantity: 0,
+        quantity: 0
       },
       {
         id: 4,
@@ -91,7 +91,7 @@ const store = Vuex.createStore({
         cost: "9.99",
         image:
           "https://www.americasfinestlabels.com/includes/work/image_cache/4b4f4b63cc837b5f01ce2d718b0f9be2.thumb.jpg",
-        quantity: 0,
+        quantity: 0
       },
       {
         id: 5,
@@ -100,8 +100,36 @@ const store = Vuex.createStore({
         cost: "9.99",
         image:
           "https://www.americasfinestlabels.com/includes/work/image_cache/4b4f4b63cc837b5f01ce2d718b0f9be2.thumb.jpg",
-        quantity: 0,
+        quantity: 0
       },
+      {
+        id: 6,
+        type: "Glasses",
+        name: "Stemless Wine Glass",
+        cost: "9.99",
+        image: 
+        "imgs/shortglass.webp",
+        quantity: 0
+      },
+      {
+        id: 7,
+        type: "Glasses",
+        name: "Tall Shotglass",
+        cost: "9.99",
+        image: 
+        "imgs/tallshot.jpg",
+        quantity: 0
+      },
+      {
+        id: 7,
+        type: "Glasses",
+        name: "Short Shotglass",
+        cost: "9.99",
+        image: 
+        "imgs/shot.jpg",
+        quantity: 0
+      },
+      
     ],
   },
   mutations: {
