@@ -65,7 +65,7 @@ const store = Vuex.createStore({
         name: "Wine Glass",
         cost: "19.99",
         image: "imgs/wineglass.jpg",
-        quantity: 0
+        quantity: 1
       },
       {
         id: 2,
@@ -74,7 +74,7 @@ const store = Vuex.createStore({
         cost: "9.99",
         image:
           "https://www.americasfinestlabels.com/includes/work/image_cache/4b4f4b63cc837b5f01ce2d718b0f9be2.thumb.jpg",
-        quantity: 0
+        quantity: 1
       },
       {
         id: 3,
@@ -100,7 +100,7 @@ const store = Vuex.createStore({
         cost: "9.99",
         image:
           "https://www.americasfinestlabels.com/includes/work/image_cache/4b4f4b63cc837b5f01ce2d718b0f9be2.thumb.jpg",
-        quantity: 0
+        quantity: 2
       },
       {
         id: 6,
