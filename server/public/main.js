@@ -121,7 +121,7 @@ const store = Vuex.createStore({
         quantity: 0
       },
       {
-        id: 7,
+        id: 8,
         type: "Glasses",
         name: "Short Shotglass",
         cost: "9.99",
@@ -129,7 +129,15 @@ const store = Vuex.createStore({
         "imgs/shot.jpg",
         quantity: 0
       },
-      
+      {
+        id: 9,
+        type: "Tumblers",
+        name: "Short Shotglass",
+        cost: "9.99",
+        image: 
+        "imgs/shot.jpg",
+        quantity: 0
+      },
     ],
   },
   mutations: {
@@ -148,15 +156,15 @@ const store = Vuex.createStore({
         state.page = "customize";
       }
     },
-    // setPage(state, page) {
-    //   state.page = page;
-    // },
+    setPage(state, page) {
+      state.page = page;
+    },
     addItemToCart(state) {
       state.cart.push(state.selectedProduct);
     },
-    // setProducts(state) {
-    //   state.page = 'products'
-    // }
+    setProducts(state) {
+      state.page = 'products'
+    }
   },
   actions: {
     setSelectedProduct({ commit }, product) {
