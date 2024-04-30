@@ -35,7 +35,7 @@ app.post('/create-checkout-session', async (req, res) => {
             cancel_url: `${process.env.SERVER_URL}/products`
         })
         res.json({ url: session.url })
-        // console.log(state.cart);
+        console.log(state.cart);
     } catch (e) {
         res.status(500).json({ error: e.message })
     }
