@@ -9,8 +9,8 @@ app.use(express.static("public"))
 const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 
 const storeItems = new Map([
-    [1, {priceInCents: 10000, name: "Yellow" }],
-    [2, {priceInCents: 20000, name: "Green"}],
+    [1, {priceInCents: 1999, name: "Glasses" }],
+    [2, {priceInCents: 999, name: "Bottles"}],
 ])
 
 app.post('/create-checkout-session', async (req, res) => {
@@ -31,27 +31,23 @@ app.post('/create-checkout-session', async (req, res) => {
                     quantity: item.quantity
                 }
             }),
-            success_url: `${process.env.SERVER_URL}/success.html`,
-            cancel_url: `${process.env.SERVER_URL}/cancel.html`
+            success_url: `${process.env.SERVER_URL}`,
+            cancel_url: `${process.env.SERVER_URL}/products`
         })
         res.json({ url: session.url })
+        // console.log(state.cart);
     } catch (e) {
         res.status(500).json({ error: e.message })
     }
     
 });
 
-
-// Serve index.html for the root URL ("/")
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/public/index.html');
-
-});
-
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+
+
 
 // try {
 //     app.listen(3001, () => {
