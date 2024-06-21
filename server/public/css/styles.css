@@ -22,48 +22,47 @@
 .categories {
      border-radius: 100%;
      height: auto;
-     width: 313px;
+     width: 100%;
      object-fit: cover;
      aspect-ratio: 1 / 1;
 }
 .categories > div {
      font-size: clamp(.5rem, 5vw, 4rem);
 }
-.Collectionsrow {
+/* .Collectionsrow {
      padding-bottom: 30px;
-}
+} */
 .Collectionscol {
      padding-left: 15px;
      padding-right: 15px;
-     padding-bottom: 50px;
+     padding-bottom: 25px;
 }
-.CollectionscolL {
+/* .CollectionscolL {
      padding-left: 15px;
      padding-right: 15px;
      max-height: 1000px;
-}
+} */
 .Collections {
      padding-left: 1rem;
      padding-right: 1rem;
 }
 .CollectionsImg {
-     height: auto;
+     height: 100%;
      width: 100%;
-     min-width: 70px;
-     min-height: 70px;
      border-radius: 3%;
 }
-.CollectionsImgL {
+/* .CollectionsImgL {
      height: 85%;
      width: 100%;
      min-width: 70px;
      min-height: 70px;
      object-fit: cover;
      border-radius: 3%;
-}
+} */
 .collect {
      padding-bottom: 40px;
      margin: clamp(2rem, 4vw, 6rem);
+     color:  #4B072D;
 }
 .About-head{
      padding-bottom: 40px;
@@ -94,10 +93,11 @@
 }
 .about-bg{
      padding-top: 40px;
-     background-color: #4B072D     ;
+     background-color: #4B072D;
      color: #FFEFF8;
      -webkit-text-stroke-color: black;
      -webkit-text-stroke-width: .5px;
+     height: 225vh;
 }
 .bg{
      background-color: #FFF0F9;
@@ -161,7 +161,7 @@
 }
 .cat-btn {
      height: 420px !important;
-     width: 300px !important;
+     width: 60% !important;
 }
 .cat-btn:hover {
      color: red;
