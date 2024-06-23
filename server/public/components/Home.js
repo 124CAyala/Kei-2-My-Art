@@ -30,7 +30,7 @@ export default {
             shopping_cart
           </span>
         </router-link>
-        <div class="line mt-5 d-none d-md-flex d-lg-flex"></div>
+        <div class="line cart-line mt-5 d-none d-md-flex d-lg-flex"></div>
       </div>
     </div>
   </nav>
@@ -42,7 +42,7 @@ export default {
             <h1 class="display-3 clear-text">and more!</h1>
           </div>
           <div class="col-4">
-            <img src="imgs/bu-bottle.jpg" alt="boston u" class="landing-img img-fluid">
+            <img src="imgs/gallery/bu-bottle.jpg" alt="boston u" class="landing-img img-fluid">
           </div>
         </div>
       </div>
@@ -79,19 +79,19 @@ export default {
         <div class="row d-flex justify-content-evenly text-center">
           <div class="col-4 ">
           <router-link class="btn cat-btn" to="/products">
-              <img src="imgs/carton-category.jpg" alt="cartons" class="img-fluid text-center categories">
+              <img src="imgs/gallery/carton-category.jpg" alt="cartons" class="img-fluid text-center categories">
               <div class="display-6 text-center text-light">Cartons</div>
               </router-link>
           </div>
           <div class="col-4">
           <router-link class="btn cat-btn" to="/products">
-              <img src="imgs/glasses-category.JPG" alt="glasses" class="img-fluid text-center categories">
+              <img src="imgs/gallery/glasses-category.JPG" alt="glasses" class="img-fluid text-center categories">
               <div class="display-6 text-center text-light">Glasses</div>
               </router-link>
           </div>
           <div class="col-4">
           <router-link class="btn cat-btn" to="/products">
-              <img src="imgs/tumblers-category.JPG" alt="tumblers" class="img-fluid text-center categories">
+              <img src="imgs/gallery/tumblers-category.JPG" alt="tumblers" class="img-fluid text-center categories">
               <div class="display-6 text-center text-light">Tumblers</div>
               </router-link>
           </div>
@@ -100,13 +100,13 @@ export default {
           <div class="col-4">
           
           <router-link class="btn cat-btn" to="/products">
-              <img src="imgs/ornament-cat.jpg" alt="ornaments" class="img-fluid text-center categories">
+              <img src="imgs/gallery/ornament-cat.jpg" alt="ornaments" class="img-fluid text-center categories">
               <div class="display-6 text-center text-light">Ornaments</div>
             </router-link>
           </div>
           <div class="col-4">
           <router-link class="btn cat-btn" to="/products">
-              <img src="imgs/julia.jpg" alt="bottles" class="img-fluid text-center categories">
+              <img src="imgs/gallery/julia.jpg" alt="bottles" class="img-fluid text-center categories">
               <div class="display-6 text-center text-light">Bottles</div>
               </router-link>
           </div>
@@ -120,66 +120,51 @@ export default {
           </div>
         </div>
         <div class="row Collectionsrow Collections">
-          <div class="col-3 CollectionscolL"><img src="imgs/Kenny.jpg" alt="" class="img-fluid CollectionsImgL"></div>
-          <div class="col-3 CollectionscolL"><img src="imgs/ornament.jpg" alt="" class="img-fluid CollectionsImgL">
+          <div class="col-3 Collectionscol"><img src="imgs/gallery/blanco.webp" alt="" class="img-fluid CollectionsImg"></div>
+          <div class="col-3 Collectionscol"><img src="imgs/gallery/cup.png" alt="" class="img-fluid CollectionsImg">
           </div>
-          <div class="col-3 CollectionscolL"><img src="imgs/designerCups.jpg" alt="" class="img-fluid CollectionsImgL">
+          <div class="col-3 Collectionscol"><img src="imgs/gallery/fab.webp" alt="" class="img-fluid CollectionsImg">
           </div>
-          <div class="col-3 CollectionscolL"><img src="imgs/Cups.jpg" alt="" class="img-fluid CollectionsImgL"></div>
+          <div class="col-3 Collectionscol"><img src="imgs/gallery/kenny.webp" alt="" class="img-fluid CollectionsImg"></div>
         </div>
         <div class="row Collections">
-          <div class="col-3 Collectionscol"><img src="imgs/Milk(2).JPG" alt="" class="img-fluid CollectionsImg"></div>
-          <div class="col-3 Collectionscol"><img src="imgs/BUbottle.JPG" alt="" class="img-fluid CollectionsImg"></div>
-          <div class="col-3 Collectionscol"><img src="imgs/Milk.JPG" alt="" class="img-fluid CollectionsImg"></div>
-          <div class="col-3 Collectionscol"><img src="imgs/DU.jpg" alt="" class="img-fluid CollectionsImg"></div>
+          <div class="col-3 Collectionscol"><img src="imgs/gallery/Milk(2).JPG" alt="" class="img-fluid CollectionsImg"></div>
+          <div class="col-3 Collectionscol"><img src="imgs/gallery/BUbottle.JPG" alt="" class="img-fluid CollectionsImg"></div>
+          <div class="col-3 Collectionscol"><img src="imgs/gallery/Milk.JPG" alt="" class="img-fluid CollectionsImg"></div>
+          <div class="col-3 Collectionscol"><img src="imgs/gallery/DU.jpg" alt="" class="img-fluid CollectionsImg"></div>
         </div>
       </div>
 
       <div class="container-fluid footer">
-        <div class="row d-flex justify-content-evenly p-5">
-          <div class="col-5 me-auto p-2 mt-4 footer">
-            <ul class="footer-list">
-              <li>
-                <h4 class="footerhead">Kei 2 My Art</h4>
-              </li>
-              <li>
-                <h6 class="footerp">Collections</h6>
-              </li>
-              <li>
-                <h6 class="footerp">Customer Support</h6>
-              </li>
-              <li>
-                <h6 class="footerp">About Us</h6>
-              </li>
-              <li>
-                <h6 class="footerp">Products</h6>
-              </li>
-            </ul>
-          </div>
-          <div class="col-2 mb-3">
-            <img src="imgs/logo.png" alt="logo" class="img-fluid footer-logo py-md-0">
-          </div>
-          <div class="col-5 mt-4 text-end">
-            <ul class="footer-list">
-              <li>
-                <h6 class="footerp">kbrown9625@gmail.com</h6>
-              </li>
-              <li>
-                <h4 class="footerhead">908-908-9088</h4>
-              </li>
-              <ul class="socials">
-                <li><img class="footerlogo" src="imgs/Rectangle 62.png" alt="twt"></li>
-                <li><img class="footerlogo" src="imgs/Rectangle 63.png" alt="ig"></li>
-                <li><img class="footerlogo" src="imgs/pinterest.png" alt="pinterest"></li>
-                <li><img class="footerlogo" src="imgs/Rectangle 65.png" alt="yt"></li>
-              </ul>
-            </ul>
-          </div>
-        </div>
-        <div class="row d-flex justify-content-center">
 
-        </div>
+    <div class="row">
+      <div class="col d-flex justify-content-center pt-5">
+        <h4>Contact / Customer Support / About Us / Products</h4>
       </div>
+    </div>
+
+    <div class="row d-flex justify-content-between">
+
+      <div class="col-4 align-self-end p-5">
+        <img src="imgs/icons-facebook.svg" class="icons" alt="">
+        <img src="imgs/icons-instagram.svg" class="icons" alt="">
+        <img src="imgs/icons-tiktok.svg" class="icons" alt="">
+        <img src="imgs/icons-twitter.svg" class="icons" alt="">
+      </div>
+
+      <div class="col-2">
+        <img src="imgs/logo.png" alt="logo" class="img-fluid footer-logo">
+      </div>
+
+      <div class="col-4 d-flex align-self-end">
+        <span class="d-flex align-self-center"><h3>In Partnership With</h3></span>
+        <img src="imgs/stripe.svg" class="stripe" alt="">
+        
+        
+      </div>
+
+    </div>
+  </div>
     `,
     methods: {
         toProducts() {
