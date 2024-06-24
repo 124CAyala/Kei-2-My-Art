@@ -64,16 +64,16 @@ const store = Vuex.createStore({
         type: "Glasses",
         name: "Wine Glass",
         cost: "19.99",
-        image: "imgs/wineglass.jpg",
+        image: "imgs/glasses/wineglass.jpg",
         quantity: 1
       },
       {
         id: 2,
         type: "Bottles",
-        name: "Wine Bottle",
+        name: "Champagne (750ml)",
         cost: "9.99",
         image:
-          "https://www.americasfinestlabels.com/includes/work/image_cache/4b4f4b63cc837b5f01ce2d718b0f9be2.thumb.jpg",
+          "imgs/bottles/champain.jpg",
         quantity: 1
       },
       {
@@ -81,25 +81,25 @@ const store = Vuex.createStore({
         type: "Cartons",
         name: "Blue Carton",
         cost: "9.99",
-        image: "imgs/blueCarton.webp",
+        image: "imgs/cartons/blueCarton.jpg",
         quantity: 0
       },
       {
         id: 4,
         type: "Ornaments",
-        name: "Ornament",
+        name: "Ornament (White)",
         cost: "9.99",
         image:
-          "https://www.americasfinestlabels.com/includes/work/image_cache/4b4f4b63cc837b5f01ce2d718b0f9be2.thumb.jpg",
+          "imgs/ornaments/whiteorn.webp",
         quantity: 0
       },
       {
         id: 5,
         type: "Tumblers",
-        name: "Tumbler",
+        name: "Tumbler (S)",
         cost: "9.99",
         image:
-          "https://www.americasfinestlabels.com/includes/work/image_cache/4b4f4b63cc837b5f01ce2d718b0f9be2.thumb.jpg",
+          "imgs/tumblers/tumbler-1.jpg",
         quantity: 2
       },
       {
@@ -108,7 +108,7 @@ const store = Vuex.createStore({
         name: "Stemless Wine Glass",
         cost: "9.99",
         image: 
-        "imgs/shortglass.webp",
+        "imgs/glasses/shortglass.webp",
         quantity: 0
       },
       {
@@ -117,7 +117,7 @@ const store = Vuex.createStore({
         name: "Tall Shotglass",
         cost: "9.99",
         image: 
-        "imgs/tallshot.jpg",
+        "imgs/glasses/tallshot.jpg",
         quantity: 0
       },
       {
@@ -126,16 +126,97 @@ const store = Vuex.createStore({
         name: "Short Shotglass",
         cost: "9.99",
         image: 
-        "imgs/shot.jpg",
+        "imgs/glasses/shot.jpg",
         quantity: 0
       },
       {
         id: 9,
         type: "Tumblers",
-        name: "Short Shotglass",
+        name: "Tumbler (M)",
         cost: "9.99",
         image: 
-        "imgs/shot.jpg",
+        "imgs/tumblers/tumbler-2.jpg",
+        quantity: 0
+      },
+      {
+        id: 10,
+        type: "Tumblers",
+        name: "Tumbler (L)",
+        cost: "9.99",
+        image: 
+        "imgs/tumblers/tumbler-4.png",
+        quantity: 0
+      },
+      {
+        id: 11,
+        type: "Bottles",
+        name: "Cognac (750ml)",
+        cost: "9.99",
+        image: 
+        "imgs/bottles/henny.jpg",
+        quantity: 0
+      },
+      {
+        id: 12,
+        type: "Bottles",
+        name: "Vodka (750ml)",
+        cost: "9.99",
+        image: 
+        "imgs/bottles/titos.jpg",
+        quantity: 0
+      },
+      {
+        id: 13,
+        type: "Cartons",
+        name: "Black Carton",
+        cost: "9.99",
+        image: 
+        "imgs/cartons/blackCarton.jpg",
+        quantity: 0
+      },
+      {
+        id: 14,
+        type: "Cartons",
+        name: "Clear Carton",
+        cost: "9.99",
+        image: 
+        "imgs/cartons/clearCarton.jpg",
+        quantity: 0
+      },
+      {
+        id: 15,
+        type: "Cartons",
+        name: "Green Carton",
+        cost: "9.99",
+        image: 
+        "imgs/cartons/greenCarton.jpg",
+        quantity: 0
+      },
+      {
+        id: 16,
+        type: "Cartons",
+        name: "Pink Carton",
+        cost: "9.99",
+        image: 
+        "imgs/cartons/pinkCarton.jpg",
+        quantity: 0
+      },
+      {
+        id: 17,
+        type: "Ornaments",
+        name: "Ornament (Clear)",
+        cost: "9.99",
+        image: 
+        "imgs/ornaments/clearorn.webp",
+        quantity: 0
+      },
+      {
+        id: 18,
+        type: "Ornaments",
+        name: "Ornament (Bulb)",
+        cost: "9.99",
+        image: 
+        "imgs/ornaments/pointornamit.jpg",
         quantity: 0
       },
     ],

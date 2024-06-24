@@ -54,9 +54,9 @@ export default {
       <!-- Display product information here -->
 
       <div class="col category-gallery">
-      <div class="row d-flex justify-content-around">
+      <div class="row d-flex justify-content-start">
       <div class="col list">
-      <div v-for="product in filteredProducts" :key="product.id">
+      <div class="w-50" v-for="product in filteredProducts" :key="product.id">
           <img class="cat-img-cartons" :src="product.image" alt="">
           <p>{{ product.name }}</p>
           <p>{{ product.cost }}</p>

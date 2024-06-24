@@ -14,8 +14,8 @@ body {
     width: 300px;
 }
 .cat-img-cartons {
-    height: 365px;
-    width: 300px;
+    height: auto;
+    width: 100%;
 }
 .cat-img-glasses {
     height: 300px;
@@ -52,5 +52,5 @@ body {
 }
 .list{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
   }
