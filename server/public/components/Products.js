@@ -33,20 +33,20 @@ export default {
          shopping_cart
        </span>
      </router-link>
-         <div class="line mt-5 d-none d-md-flex d-lg-flex"></div>
+         <div class="line cart-line mt-5 d-none d-md-flex d-lg-flex"></div>
        </div>
      </div>
    </nav>
 
      <div class="row">
             <div class="col-3 offset-1">
-      <h1>{{ selectedType || 'All Products' }}</h1>
+      <h1 class="display-5 h-category text-end">{{ selectedType || 'All Products' }}</h1>
         <ul class="category">
-          <li><button @click="filterProducts('Bottles')" type="button" class="btn" role="button">Bottles</button></li>
-          <li><button @click="filterProducts('Tumblers')" type="button" class="btn" role="button">Tumblers</button></li>     
-          <li><button @click="filterProducts('Glasses')" type="button" class="btn" role="button">Glasses</button></li>
-          <li><button @click="filterProducts('Ornaments')" type="button" class="btn" role="button">Ornaments</button></li>
-          <li><button @click="filterProducts('Cartons')" type="button" class="btn" role="button">Cartons</button></li>
+          <li><button @click="filterProducts('Bottles')" type="button" class="btn nav-category" role="button">Bottles</button></li>
+          <li><button @click="filterProducts('Tumblers')" type="button" class="btn nav-category" role="button">Tumblers</button></li>     
+          <li><button @click="filterProducts('Glasses')" type="button" class="btn nav-category" role="button">Glasses</button></li>
+          <li><button @click="filterProducts('Ornaments')" type="button" class="btn nav-category" role="button">Ornaments</button></li>
+          <li><button @click="filterProducts('Cartons')" type="button" class="btn nav-category" role="button">Cartons</button></li>
         </ul>
           </div>
 
@@ -56,11 +56,12 @@ export default {
       <div class="col category-gallery">
       <div class="row d-flex justify-content-start">
       <div class="col list">
-      <div class="w-50" v-for="product in filteredProducts" :key="product.id">
-          <img class="cat-img-cartons" :src="product.image" alt="">
-          <p>{{ product.name }}</p>
-          <p>{{ product.cost }}</p>
-        <router-link to="/customize" v-on:click="selectProduct(product)" class="btn btn-primary">Select This Product</router-link>
+      <div class="p-5 text-center" v-for="product in filteredProducts" :key="product.id">
+        <router-link to="/customize" v-on:click="selectProduct(product)" class="link">
+          <img class="cat-img-cartons w-75" :src="product.image" alt="">
+          <h4 class="info-prod pt-4">{{ product.name }}</h4>
+          <h4 class="info-prod">{{ product.cost }}</h4>
+        </router-link>
       </div>
 
       </div>
@@ -70,7 +71,35 @@ export default {
        
       <!-- Add more product details as needed -->
     </div>
+<div class="container-fluid footer">
 
+    <div class="row">
+      <div class="col d-flex justify-content-center pt-5">
+        <h4>Contact / Customer Support / About Us / Products</h4>
+      </div>
+    </div>
+
+    <div class="row d-flex justify-content-between">
+
+      <div class="col-4 align-self-end p-5">
+        <img src="imgs/icons-facebook.svg" class="icons" alt="">
+        <img src="imgs/icons-instagram.svg" class="icons" alt="">
+        <img src="imgs/icons-tiktok.svg" class="icons" alt="">
+        <img src="imgs/icons-twitter.svg" class="icons" alt="">
+      </div>
+
+      <div class="col-2">
+        <img src="imgs/logo.png" alt="logo" class="img-fluid footer-logo">
+      </div>
+
+      <div class="col-4 d-flex align-self-end">
+        <span class="d-flex align-self-center"><h3>In Partnership With</h3></span>
+        <img src="imgs/stripe.svg" class="stripe" alt="">
+        
+        
+      </div>
+
+    </div>
     
      </div>
     `,

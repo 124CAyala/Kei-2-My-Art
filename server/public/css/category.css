@@ -5,9 +5,23 @@
 body {
     background-color: #FFF0F9;
 }
+.link {
+    text-decoration: none;
+}
+.info-prod{
+    color:#4B072D!important;
+}
+.h-category {
+    color: #4B072D;
+    margin-right: 5rem;
+}
 .category li {
     list-style-type: none;
     margin: 2.5em;
+    text-align: end;
+}
+.nav-category {
+    font-size: 2rem;
 }
 .cat-img-bottles {
     height: 420px;
@@ -52,5 +66,5 @@ body {
 }
 .list{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
   }
