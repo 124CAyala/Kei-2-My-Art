@@ -68,3 +68,11 @@ body {
     display: grid;
     grid-template-columns: auto auto;
   }
+.h-customize {
+    color:#4B072D;
+}
+.upload {
+    height: 30vh;
+    width: 50vh;
+    background-color: gray;
+}

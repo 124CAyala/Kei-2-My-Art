@@ -32,16 +32,68 @@ export default {
           shopping_cart
         </span>
       </router-link>
-      <div class="line mt-5 d-none d-md-flex d-lg-flex"></div>
+      <div class="line cart-line mt-5 d-none d-md-flex d-lg-flex"></div>
     </div>
   </div>
 </nav>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col">
+      <h1 class="display-4 text-center h-customize">
+      Customize Your Product
+      </h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4 ms-3 mt-4 text-center">
+      <h1 class="h-customize text-center">Selected Product</h1>
+      <img class="w-100" :src="selectedProduct.image" alt="selected">
+      <p class="h-customize text-center">{{ selectedProduct.name }}</p>
+      <p class="h-customize text-center">{{ selectedProduct.cost }}</p>
+      <button id="addToCart" class="btn btn-primary" v-on:click="addItemToCart(selectedProduct)">Add To Cart</button>
+    </div>
+    <div class="col text-end">
+      <h1 class="h-customize">Upload Your Design</h1>
+      <div class="upload float-end">
+      </div>
+    </div>
+  </div>
+
+</div>
   
-  
-    <h1>Selected Product</h1>
-    <p>{{ selectedProduct.name }}</p>
-    <p>{{ selectedProduct.cost }}</p>
-    <button id="addToCart" class="btn btn-primary" v-on:click="addItemToCart(selectedProduct)">Add To Cart</button>
+<div class="container-fluid footer">
+
+    <div class="row">
+      <div class="col d-flex justify-content-center pt-5">
+        <h4>Contact / Customer Support / About Us / Products</h4>
+      </div>
+    </div>
+
+    <div class="row d-flex justify-content-between">
+
+      <div class="col-4 align-self-end p-5">
+        <img src="imgs/icons-facebook.svg" class="icons" alt="">
+        <img src="imgs/icons-instagram.svg" class="icons" alt="">
+        <img src="imgs/icons-tiktok.svg" class="icons" alt="">
+        <img src="imgs/icons-twitter.svg" class="icons" alt="">
+      </div>
+
+      <div class="col-2">
+        <img src="imgs/logo.png" alt="logo" class="img-fluid footer-logo">
+      </div>
+
+      <div class="col-4 d-flex align-self-end">
+        <span class="d-flex align-self-center"><h3>In Partnership With</h3></span>
+        <img src="imgs/stripe.svg" class="stripe" alt="">
+        
+        
+      </div>
+
+    </div>
+    
   </div>`,
   computed: {
     selectedProduct() {
