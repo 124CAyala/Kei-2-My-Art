@@ -47,20 +47,32 @@ export default {
     </div>
   </div>
 
-  <div class="row">
+  <div class="row d-flex justify-content-between">
     <div class="col-4 ms-3 mt-4 text-center">
       <h1 class="h-customize text-center">Selected Product</h1>
       <img class="w-100" :src="selectedProduct.image" alt="selected">
       <p class="h-customize text-center">{{ selectedProduct.name }}</p>
       <p class="h-customize text-center">{{ selectedProduct.cost }}</p>
-      <button id="addToCart" class="btn btn-primary" v-on:click="addItemToCart(selectedProduct)">Add To Cart</button>
+      <button id="addToCart" class="btn btn-primary mb-4" v-on:click="addItemToCart(selectedProduct)">Add To Cart</button>
     </div>
-    <div class="col text-end">
-      <h1 class="h-customize">Upload Your Design</h1>
-      <div class="upload float-end">
+    <div class="col-5 text-center my-3">
+      <div class="my-5">
+        <label for="formFile" class="form-label">
+          <h1 class="h-customize">
+            Upload Your Design
+          </h1>
+        </label>
+        <input class="form-control" type="file" id="formFile">
+      </div>
+      <h1 class="h-customize my-5">
+        Additional Specifications
+      </h1>
+      <div class="input-group">
+        <textarea class="form-control" aria-label="With textarea"></textarea>
       </div>
     </div>
   </div>
+
 
 </div>
   
